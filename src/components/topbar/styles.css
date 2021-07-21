@@ -2,53 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-    .icon {
+  .icon {
       @apply w-8 h-8 mr-2 hover:text-black transition-colors;
-    }
-
-    /* Smartphones (landscape) ----------- */
-@media only screen 
-and (min-width : 321px) {
-/* Styles */
-}
+  }
 
 /* Smartphones (portrait) ----------- */
 @media only screen 
-and (max-width : 320px) {
-/* Styles */
+and (max-width : 375px) {
+  #topLeft{
+    @apply hidden;
+  }
 }
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) {
-/* Styles */
-}
-
-/* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-/* Styles */
-}
-
-/* iPads (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-/* Styles */
+  #topBarAvatar{
+    @apply hidden;
+  }
+  h1 {
+    @apply hidden;
+  }
+  #topBarTitle {
+    @apply hidden;
+  }
+  #topLeft {
+    @apply ml-10;
+  }
+  #topRight {
+    @apply mr-6;
+  }
 }
 
 /* Desktops and laptops ----------- */
 @media only screen 
 and (min-width : 1224px) {
-/* Styles */
+  #topBarAvatar{
+    @apply hidden;
+  }
+  #topBar {
+    @apply pl-14;
+  }
+  h1 {
+    @apply hidden;
+  }
+  #topLeft {
+    @apply ml-10;
+  }
+  #topRight {
+    @apply mr-6;
+  }
 }
 
 /* Large screens ----------- */
 @media only screen 
 and (min-width : 1824px) {
-/* Styles */
+  #topBarAvatar{
+    @apply hidden;
+  }
+  #topBar {
+    @apply pl-14;
+  }
+  #topBarTitle {
+    @apply hidden;
+  }
+  #topLeft {
+    @apply ml-10;
+  }
+  #topRight {
+    @apply mr-6;
+  }
 }

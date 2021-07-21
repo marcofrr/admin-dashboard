@@ -16,8 +16,8 @@ function App() {
       <div className="flex w-full bg-gray-bg">
         <Sidebar />
         <div id="mainContent" className="flex flex-col w-full h-full">
-          <Topbar />
-          <div className="flex overflow-auto p-10 h-full">
+          {/* <Topbar /> */}
+          <div className="flex overflow-auto h-full">
             <Switch>
               <Route exact path="/">
                 <Dashboard />
