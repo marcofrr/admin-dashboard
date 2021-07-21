@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+    .singleRecepient:hover .recepientActions{
+        @apply flex !important;
+
+    }
+    .singleRecepient:hover .singleRecepient{
+        border-top-width:1rem solid transparent !important;
+
+    }
+    .recepientListOn {
+        @apply w-3/4 !important;
+    }
+
+    .on {
+        @apply flex !important;
+    }
+    
+

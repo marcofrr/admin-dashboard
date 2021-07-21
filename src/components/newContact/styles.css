@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.input:focus-within {
+  @apply border-black;
+}
+
+.input:focus-within >label {
+  @apply text-blue;
+}
+
+.active > svg{
+    @apply text-black
+}
+.active > h2{
+    @apply text-black
+}

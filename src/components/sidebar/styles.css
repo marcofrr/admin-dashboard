@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+    #userCard:hover img{
+        @apply border-2 border-blue;
+    }
+    .menuItem {
+        @apply hover:text-blue transition-colors cursor-pointer text-black;
+    }
+    .itemContainer {
+        @apply p-3 flex items-center menuItem;
+    }
+    .menuIcon {
+        @apply h-6 w-6 pointer-events-none;
+    }
+    .menuWords{
+        @apply text-size-3 font-bold ml-4 pointer-events-none;
+    }
+    .subMenuWords{
+        @apply text-size-3 font-medium ml-4;
+    }
+    .checked #userInfo > h2 {
+        @apply hidden;
+    }
+
+    .subMenuActive > .subMenuContainer{
+        @apply flex;
+    }
+
+    .checked #userInfo {
+        @apply hidden;
+    }
+
+    .checked .menuWords {
+        @apply hidden;
+    }
+
+    .checked #toggle > svg {
+        @apply text-blue;
+    }
+    
+    .checked #header > h3 {
+        @apply text-size-5;
+    }
+    .checked {
+        @apply !important w-24;
+    }
+    .activeSide {
+        @apply text-blue;
+    }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+    #sidebar {
+        @apply hidden;
+    }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}

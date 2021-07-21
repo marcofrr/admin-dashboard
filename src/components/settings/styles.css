@@ -1,0 +1,21 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+    .settingsItem:hover {
+        @apply text-blue transition-colors cursor-pointer  border-r-2 border-blue;
+    }
+    .settingsItemContainer {
+        @apply flex items-center settingsItem p-4 pl-6;
+    }
+
+    .active{
+        @apply border-r-2 text-blue border-blue;
+    }
+    .active > svg {
+        @apply text-blue;
+    }
+
+

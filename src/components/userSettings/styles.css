@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.input:focus-within {
+  @apply border-black;
+}
+
+.input:focus-within >label {
+  @apply text-blue;
+}

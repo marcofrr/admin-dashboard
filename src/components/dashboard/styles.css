@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .taskCard {
+        @apply flex flex-col h-32 p-2 rounded-md shadow-md m-6 hover:shadow-xl cursor-pointer;
+    }
+    .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+    .hoverDay:hover .day {
+        @apply text-blue;
+    }
+    /* .hoverDay:hover div> h3 {
+        @apply hover:text-blue;
+    } */
+}
+
