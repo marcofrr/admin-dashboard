@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
     .taskCard {
-        @apply flex flex-col h-32 p-2 rounded-md shadow-md m-6 hover:shadow-xl cursor-pointer;
+        @apply flex flex-col p-2 rounded-md shadow-md m-6 hover:shadow-xl cursor-pointer;
     }
     .dropdown:hover .dropdown-menu {
         display: block;
@@ -12,8 +11,100 @@
     .hoverDay:hover .day {
         @apply text-blue;
     }
-    /* .hoverDay:hover div> h3 {
-        @apply hover:text-blue;
-    } */
+
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 375px) {
+    #dashboardRight {
+        @apply rounded-md;
+    }
+    #pieChartContainer {
+        @apply h-80;
+    }
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+    #dashboardContainer{
+        @apply flex-row p-8;
+    }
+    #dashboardContainer > h3{
+        @apply text-size-1;
+    }
+    #dashboardLeft {
+        @apply w-3/5 mr-4;
+    }
+    #dashboardRight {
+        @apply w-2/5 ml-4;
+    }
+
+    #dashDropMobile {
+       @apply hidden; 
+    }
+    #dashDropDesktop {
+       @apply flex; 
+    }
+    #taskHeader {
+        @apply justify-between flex-row;
+    }
+    #right {
+        @apply w-32;
+    }
+    #right > h2 {
+        @apply text-size-4;
+    }
+    #lineChartContainer {
+        @apply  h-1/2;
+    }
+    #pieChartContainer {
+        @apply  h-1/2;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+    #dashboardContainer{
+        @apply flex-row p-8;
+    }
+    #dashboardLeft {
+        @apply w-3/5 mr-4;
+    }
+    #dashboardRight {
+        @apply w-2/5 ml-4;
+    }
+    #dashDropMobile {
+        @apply hidden; 
+    }
+    #dashDropDesktop {
+       @apply flex; 
+    }
+    #taskHeader {
+        @apply justify-between flex-row;
+    }
+
+    #right {
+        @apply w-32;
+    }
+    #right > h2 {
+        @apply text-size-2;
+    }
+
+    #lineChartContainer {
+        @apply  h-1/2;
+    }
+    #pieChartContainer {
+        @apply  h-1/2;
+    }
 }
 

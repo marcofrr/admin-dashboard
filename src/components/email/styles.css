@@ -2,15 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-    th{
-        @apply text-left
+tr{
+    @apply text-left align-middle mt-4 ;
+}
+tbody > tr {
+   @apply border-gray border-t;
+}
+.selected {
+    @apply bg-blue-light;
+}
+.item {
+    @apply hover:shadow-xl;
+}
+
+th, td {
+    @apply text-left p-4;              
+}
+
+
+.selected {
+    @apply bg-blue-light;
+}
+  
+
+
+  /* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+    #emailContainer {
+        @apply p-8;
     }
-    tr{
-        @apply text-left align-middle
+    #creaEmailContainer {
+        @apply flex-row;
+    }
+    /* #emailType{
+        @apply p-0;
+    } */
+    #emailImport {
+        @apply flex;
+    }
+    #lastUpdated {
+        @apply table-cell;
+    }
+    #openDate {
+        @apply table-cell;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+    #emailContainer {
+        @apply p-8;
+    }
+    #creaEmailContainer {
+        @apply flex-row;
     }
 
-    .selected {
-    @apply bg-blue-light;
+    #emailImport {
+        @apply flex;
     }
-  }
+    #lastUpdated {
+        @apply table-cell;
+    }
+    #openDate {
+        @apply table-cell;
+    }
+}

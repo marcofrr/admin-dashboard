@@ -42,16 +42,29 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
 
 export default function Dashboard() {
     return (
-        <div className="flex flex-col w-full h-full ">
-            <Topbar name="Dashboard"></Topbar>
-            <div className="flex bg-transparent h-full p-4 rounded-md w-full" >
+        <div className="flex flex-col w-full ">
+            <Topbar name="Dashboard" placeholder="Global search"></Topbar>
+            <div id="dashboardContainer" className="flex flex-col bg-transparent p-4 rounded-md">
                 {/* left content */}
-                <div className="flex-grow-1 bg-white w-3/5 m-4 rounded-md shadow-xl">
+                <div id="dashboardLeft" className="flex-grow-1 bg-white w-full rounded-md shadow-xl mb-4">
+
+                    <div id="dashDropMobile" className="flex p-4 justify-end desktopHidden">
+                        <div className="mr-2">Show:</div>
+                        <div className="z-50">
+                            <div className="dropdown inline-block relative">
+                                <button className="text-blue font-medium rounded inline-flex items-center">
+                                    <span className="mr-1">This week</span>
+                                    <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /> </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
                     <div className="flex justify-between m-4 items-center  py-2">
                         <div>
                             <h3>8 task <span className="text-green">completed</span> out of 10</h3>
                         </div>
-                        <div className="flex">
+                        <div id="dashDropDesktop" className="hidden desktopFlex">
                             <div className="mr-2">Show:</div>
                             <div className="z-50">
                                 <div className="dropdown inline-block relative">
@@ -122,7 +135,7 @@ export default function Dashboard() {
                     </div>
 
                     <div id="taskCard" className="taskCard">
-                        <div className="flex justify-between p-2 w-full">
+                        <div id="taskHeader" className="flex flex-col-reverse p-2 w-full">
                             <div className="flex flex-col">
                                 <h1 className="font-black">Send benefit review by Sunday</h1>
                                 <div className="flex">
@@ -131,7 +144,7 @@ export default function Dashboard() {
                                 </div>
                             </div>
                             <div>
-                                <h3 className="text-right text-gray">Reminder</h3>
+                                <h3 className="text-right text-gray mb-2">Reminder</h3>
                             </div>
                         </div>
                         <div className="flex justify-between bottom-0 p-2">
@@ -144,13 +157,13 @@ export default function Dashboard() {
                                 <h2 className="font-medium text-gray-table ml-2 text-size-1">George Fields</h2>
                             </div>
 
-                            <div id="right" className="flex relative p-4 w-32 bg-green rounded-md justify-center items-center">
-                                <h2 className="transparent absolute text-white font-light text-size-2">Completed</h2>
+                            <div id="right" className="flex relative p-4 w-24 bg-green rounded-md justify-center items-center">
+                                <h2 className="transparent absolute text-white font-light text-size-1">Completed</h2>
                             </div>
                         </div>
                     </div>
                     <div id="taskCard" className="taskCard">
-                        <div className="flex justify-between p-2 w-full">
+                        <div id="taskHeader" className="flex flex-col-reverse p-2 w-full">
                             <div className="flex flex-col">
                                 <h1 className="font-black">Send benefit review by Sunday</h1>
                                 <div className="flex">
@@ -159,7 +172,7 @@ export default function Dashboard() {
                                 </div>
                             </div>
                             <div>
-                                <h3 className="text-right text-gray">Reminder</h3>
+                                <h3 className="text-right text-gray mb-2">Reminder</h3>
                             </div>
                         </div>
                         <div className="flex justify-between bottom-0 p-2">
@@ -172,13 +185,13 @@ export default function Dashboard() {
                                 <h2 className="font-medium text-gray-table ml-2 text-size-1">George Fields</h2>
                             </div>
 
-                            <div id="right" className="flex relative p-4 w-32 bg-green rounded-md justify-center items-center">
-                                <div className="transparent absolute text-white font-light text-size-2">Completed</div>
+                            <div id="right" className="flex relative p-4 w-24 bg-green rounded-md justify-center items-center">
+                                <h2 className="transparent absolute text-white font-light text-size-1">Completed</h2>
                             </div>
                         </div>
                     </div>
                     <div id="taskCard" className="taskCard">
-                        <div className="flex justify-between p-2 w-full">
+                        <div id="taskHeader" className="flex flex-col-reverse p-2 w-full">
                             <div className="flex flex-col">
                                 <h1 className="font-black">Send benefit review by Sunday</h1>
                                 <div className="flex">
@@ -187,7 +200,7 @@ export default function Dashboard() {
                                 </div>
                             </div>
                             <div>
-                                <h3 className="text-right text-gray">Reminder</h3>
+                                <h3 className="text-right text-gray mb-2">Reminder</h3>
                             </div>
                         </div>
                         <div className="flex justify-between bottom-0 p-2">
@@ -200,23 +213,24 @@ export default function Dashboard() {
                                 <h2 className="font-medium text-gray-table ml-2 text-size-1">George Fields</h2>
                             </div>
 
-                            <div id="right" className="flex relative p-4 w-32 bg-green rounded-md justify-center items-center">
-                                <div className="transparent absolute text-white font-light text-size-2">Completed</div>
+                            <div id="right" className="flex relative p-4 w-24 bg-green rounded-md justify-center items-center">
+                                <h2 className="transparent absolute text-white font-light text-size-1">Completed</h2>
                             </div>
                         </div>
                     </div>
-                    <div className="flex justify-center items-center">
+
+                    <div className="flex justify-center items-center mb-4">
                         <h2 className="text-blue cursor-pointer font-bold">Show More</h2>
                     </div>
                 </div>
-                <div className="flex flex-col flex-grow-0 bg-white w-2/5 m-4 rounded-md">
-                    <div className="bg-white h-1/2 mb-8 shadow-xl">
+                <div id="dashboardRight" className="flex flex-col bg-transparent w-full">
+                    <div id="lineChartContainer" className=" bg-white mb-4 shadow-xl rounded-md">
                         <div className="flex justify-between">
                             <div className="m-4">
-                                <h1 className="font-black">Deals</h1>
+                                <h1 className="font-black text-size-4">Deals</h1>
                             </div>
                             <div>
-                                <div className="flex  m-4">
+                                <div className="flex m-4">
                                     <div className="mr-2">Show:</div>
                                     <div className="dropdown inline-block relative">
                                         <button className="text-blue font-medium rounded inline-flex items-center">
@@ -230,7 +244,7 @@ export default function Dashboard() {
                         <div id="separator" className="flex">
                             <span className="bg-gray h-px w-full opacity-50"></span>
                         </div>
-                        <div className="w-full h-full mt-2 flex justify-center m-auto">
+                        <div className="w-full h-full flex justify-center pt-4 pb-4">
                             <ResponsiveContainer width="100%" height="80%">
                                 <LineChart
                                     width={500}
@@ -250,12 +264,70 @@ export default function Dashboard() {
                                     <Line type="monotone" dataKey="pv" stroke="#109CF1" activeDot={{ r: 8 }} />
                                 </LineChart>
                             </ResponsiveContainer>
+
                         </div>
                     </div>
 
+                    <div id="pieChartContainer" className=" bg-white shadow-xl rounded-md mb-12">
+                        <div className="flex justify-between">
+                            <div className="m-4">
+                                <h1 className="font-black text-size-4">Tasks</h1>
+                            </div>
+                            <div>
+                                <div className="flex m-4">
+                                    <div className="mr-2">Show:</div>
+                                    <div className="dropdown inline-block relative">
+                                        <button className="text-blue font-medium rounded inline-flex items-center">
+                                            <span className="mr-1">Monthly</span>
+                                            <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /> </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="separator" className="flex">
+                            <span className="bg-gray h-px w-full opacity-50"></span>
+                        </div>
+                        <div className="w-full flex justify-center">
+                            <div className="flex w-3/5 h-72">
+                                <ResponsiveContainer width="100%" height="100%">
+                                    <PieChart className="w-32">
+                                        <Pie
+                                            data={PieData}
+                                            cx="50%"
+                                            cy="50%"
+                                            labelLine={false}
+                                            label={renderCustomizedLabel}
+                                            outerRadius={100}
+                                            fill="#8884d8"
+                                            dataKey="value"
+                                        >
+                                            {PieData.map((entry, index) => (
+                                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                                            ))}
+                                        </Pie>
+                                    </PieChart>
+                                </ResponsiveContainer>
+                            </div>
+                            <div className="flex flex-col w-2/5 justify-center">
+                                <div className="flex items-center p-2">
+                                    <span className="transparent h-3 w-3 rounded-lg border-2 border-yellow mr-2"></span>
+                                    <span className="text-size-1">Active</span>
+                                </div>
+                                <div className="flex items-center p-2">
+                                    <span className="transparent h-3 w-3 rounded-lg border-2 border-green mr-2"></span>
+                                    <span className="text-size-1">Completed</span>
+                                </div>
+                                <div className="flex items-center p-2">
+                                    <span className="transparent h-3 w-3 rounded-lg border-2 border-red mr-2"></span>
+                                    <span className="text-size-1">Ended</span>
+                                </div>
 
+                            </div>
+                        </div>
+                    </div>
 
-                    <div className="flex flex-col bg-white h-1/2 shadow-xl">
+                    {/* <div id="pieChartContainer" className="flex flex-col bg-white shadow-xl rounded-md mb-8">
                         <div className="flex justify-between">
                             <div className=" m-4">
                                 <h1 className="font-black">Tasks</h1>
@@ -313,7 +385,7 @@ export default function Dashboard() {
                             </div>
                         </div>
 
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

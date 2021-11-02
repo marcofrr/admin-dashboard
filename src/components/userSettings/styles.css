@@ -11,3 +11,59 @@
 .input:focus-within >label {
   @apply text-blue;
 }
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 375px) {
+  #userSettingsContainer{
+    @apply mb-16;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+  #userSettingsContainer{
+    @apply flex-row m-8;
+  }
+  #userSettingsAdmin{
+    @apply w-1/5 border-gray border-r items-start justify-start;
+  }
+  #userSettingsBasicInfo{
+    @apply w-2/5 border-gray border-r pl-12;
+  }
+  #userSettingsChangePass{
+    @apply w-2/5 pl-12;
+  }
+  #userSettingsAvatar{
+    @apply mb-8;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+  #userSettingsContainer{
+    @apply flex-row m-8;
+  }
+  #userSettingsAdmin{
+    @apply w-1/5 border-gray border-r items-start justify-start;
+  }
+  #userSettingsBasicInfo{
+    @apply w-2/5 border-gray border-r pl-12;
+  }
+  #userSettingsChangePass{
+    @apply w-2/5 pl-12;
+  }
+  #userSettingsAvatar{
+    @apply mb-8;
+  }
+}

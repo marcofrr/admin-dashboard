@@ -2,3 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 375px) {
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+    #newTaskWindow {
+        @apply w-2/5 h-3/5;
+    }
+    #newTaskActive {
+        @apply w-36 text-size-2;
+    }
+    #newTaskCompleted {
+        @apply w-36 text-size-2;
+    }
+    #newTaskEnded {
+        @apply w-36 text-size-2;
+    }
+    #newTaskBtnContainer{
+        @apply p-8;
+    }
+    #newTaskformContainer{
+        @apply p-8;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+    #newTaskWindow {
+        @apply w-2/5 h-3/5;
+    }
+    #newTaskActive {
+        @apply w-36 text-size-2;
+    }
+    #newTaskCompleted {
+        @apply w-36 text-size-2;
+    }
+    #newTaskEnded {
+        @apply w-36 text-size-2;
+    }
+    #newTaskBtnContainer{
+        @apply p-8;
+    }
+    #newTaskformContainer{
+        @apply p-8;
+    }
+}

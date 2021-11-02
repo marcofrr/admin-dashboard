@@ -1,0 +1,71 @@
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 375px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+    #backEmailContainer{
+        @apply flex-row pr-8 pl-8 pt-8;
+    }
+    #emailComponents{
+        @apply flex;
+    }
+    #sendEmail{
+        @apply w-40 pl-2 pt-2 pb-2;
+    }
+    #emailBody{
+        @apply w-2/3;
+    }
+    #sendEmailBtn{
+        @apply w-40;
+    }
+    #deleteNewEmail{
+        @apply flex;
+    }
+    #emailSubject{
+        @apply w-1/2 h-12;
+    }
+    #emailContainer {
+        @apply p-8;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+    #backEmailContainer {
+        @apply flex-row pr-8 pl-8 pt-8;
+    } 
+    #emailComponents {
+        @apply flex;
+    }
+    #sendEmail {
+        @apply w-40 pl-2 pt-2 pb-2;
+    }
+    #emailBody {
+        @apply w-2/3;
+    }
+    #sendEmailBtn {
+        @apply w-40;
+    }
+    #deleteNewEmail {
+        @apply flex;
+    }
+    #emailSubject {
+        @apply w-1/2 h-12;
+    }
+    #emailContainer {
+        @apply p-8;
+    }
+}

@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
     #userCard:hover img{
         @apply border-2 border-blue;
     }
@@ -15,7 +16,7 @@
         @apply h-6 w-6 pointer-events-none;
     }
     .menuWords{
-        @apply text-size-3 font-bold ml-4 pointer-events-none;
+        @apply text-size-3 font-bold ml-4 pointer-events-none hidden;
     }
     .subMenuWords{
         @apply text-size-3 font-medium ml-4;
@@ -24,97 +25,115 @@
 
     .subMenuActive > .subMenuContainer{
         @apply flex;
-    }
+    } 
     .checked #userInfo > h2 {
         @apply hidden;
     }
     .checked #userInfo {
         @apply hidden;
-    }
+    } 
     .checked #userCard > img {
         @apply h-9 w-9;
-    }
+    } 
     .checked .menuWords {
         @apply hidden;
-    }
+    } 
 
     .checked #sideBarToggle > svg {
         @apply text-blue;
     }
 
-    .checked #header > h3 {
+    .checked #navbarHeader > h3 {
         @apply text-size-5;
     }
 
     .checked {
         @apply !important w-24;
     }
+
     .activeSide {
         @apply text-blue;
     }
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (max-device-width : 375px) {
-/* Styles */
-    #sidebar {
-        @apply hidden;
-    }
-}
-
 /* Smartphones (portrait) ----------- */
 @media only screen 
-and (max-width : 320px) {
-/* Styles */
+and (max-width : 375px) {
+
+
 }
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px){
-    #userInfo {
-        @apply hidden;
-    }
-
-   .menuWords {
-        @apply hidden;
-    }
-
-    #sideBarToggle > svg {
-        @apply text-blue;
-    }
-    
-    #header > h3 {
-        @apply text-size-5;
-    }
-    #sidebar {
-        @apply w-24 !important;
-    }
-    #subMenuItem {
-        @apply hidden;
-    }
-}
-
 
 /* Desktops and laptops ----------- */
 @media only screen 
 and (min-width : 1224px) {
+    #navbar {
+        @apply static w-64 flex-col h-full bg-white;
+    }
+    #userInfo {
+        @apply flex flex-col;
+    }
+    #menu {
+        @apply flex-col;
+    }
+   .menuWords {
+        @apply flex;
+    }
     #sideBarToggle {
+        @apply flex;
+    }
+    #navbarHeader {
         @apply flex;
     }
     #userCard > img {
         @apply h-12 w-12;
     }
-
+    #menuWords {
+        @apply flex;
+    }
+    #navUser {
+        @apply flex;
+    }
+    #navSettings {
+        @apply block;
+    }
+    #separatorNav {
+        @apply flex;
+    }
 }
 
 /* Large screens ----------- */
 @media only screen 
 and (min-width : 1824px) {
+    #navbar {
+        @apply static w-64 flex-col h-full bg-white;
+    }
+    #userInfo {
+        @apply flex flex-col;
+    }
+    #menu {
+        @apply flex-col;
+    }
+   .menuWords {
+        @apply flex;
+    }
     #sideBarToggle {
+        @apply flex;
+    }
+    #navbarHeader {
         @apply flex;
     }
     #userCard > img {
         @apply h-12 w-12;
+    }
+    #menuWords {
+        @apply flex;
+    }
+    #navUser {
+        @apply flex;
+    }
+    #navSettings {
+        @apply block;
+    }
+    #separatorNav {
+        @apply flex;
     }
 }

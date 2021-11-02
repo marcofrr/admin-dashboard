@@ -2,15 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-    th{
-        @apply text-left
-    }
-    tr{
-        @apply text-left align-middle
-    }
-
-    .selected {
+/* th{
+    @apply text-left;
+} */
+tr{
+    @apply text-left align-middle mt-4 ;
+}
+tbody > tr {
+   @apply border-gray border-t;
+}
+.selected {
     @apply bg-blue-light;
+}
+.item {
+    @apply hover:shadow-xl;
+}
+
+th, td {
+    @apply text-left p-4;              
+}
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 375px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+    #createTaskContainer {
+        @apply flex-row;
     }
-  }
+    #assoWith {
+        @apply table-cell;
+    }
+    #dueDate {
+        @apply table-cell;
+    }
+    #title {
+        @apply w-96;
+    }
+    #taskContainer {
+        @apply p-8;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+    #createTaskContainer {
+        @apply flex-row;
+    }
+    #assoWith {
+        @apply table-cell;
+    }
+    #dueDate {
+        @apply table-cell;
+    }
+    #title {
+        @apply w-96;
+    }
+    #taskContainer {
+        @apply p-8;
+    }
+}
+

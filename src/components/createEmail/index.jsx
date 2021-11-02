@@ -2,44 +2,60 @@ import React from 'react'
 import { IoIosArrowBack } from 'react-icons/io'
 import { FiTrash2 } from 'react-icons/fi'
 import { BsCardImage } from 'react-icons/bs'
+import Topbar from '../topbar';
+
+import './styles.css'
+import { useHistory } from 'react-router-dom';
 export default function CreateEmail() {
+
+    const history = useHistory()
+
+    const goEmails = () => {
+        history.push('/email');
+    }
+
     return (
-        <div className="w">
-            <div className="flex items-center justify-between w-full mb-4">
-                <div className="flex items-center cursor-pointer">
+
+        <div className="flex flex-col w-full">
+            <Topbar name="New email" placeholder="Search for a mail"></Topbar>
+            <div id="backEmailContainer" className="flex flex-col justify-between items-start w-full">
+                <div className="flex items-center cursor-pointer" onClick={goEmails}>
                     <IoIosArrowBack className="text-blue w-8 h-8"></IoIosArrowBack>
                     <div className="font-normal text-black-table">Back to emails</div>
                 </div>
-                <div>
-                    <button className="text-white bg-blue rounded-md w-40 h-10 hover:bg-blue-light shadow-xl cursor-pointer">Send again</button>
+                <div id="sendEmail" className="w-full flex items-center">
+                    <button id="sendEmailBtn" className="text-white bg-blue rounded-md w-full h-10 hover:bg-blue-light shadow-xl cursor-pointer">Send email</button>
                 </div>
             </div>
-            <div className="flex">
-                <div className="flex flex-col w-2/3 bg-white rounded-xl shadow-xl">
+            <div id="emailContainer" className="flex p-4 pb-16">
+                <div id="emailBody" className="flex flex-col w-full bg-white rounded-md shadow-xl">
                     <div className="w-full">
-                        <div className="flex items-center justify-between p-6 w-full">
+                        <div className="flex items-center justify-between p-4 w-full">
                             <div id="right" className="flex relative p-4 w-24 bg-yellow rounded-md justify-center items-center">
                                 <div className="transparent absolute text-white font-light text-size-2">Draft</div>
                             </div>
-                            <div>
+                            <div id="deleteNewEmail" className="hidden">
                                 <FiTrash2 className="text-gray w-6 h-6 hover:text-blue cursor-pointer"></FiTrash2>
+                            </div>
+                            <div>
+                                <h2 className="font-normal text-gray text-size-1">Saved at 16:40,23 Dec, 2018</h2>
                             </div>
                         </div>
                     </div>
                     <div className="w-full">
-                        <div className="flex items-center justify-between pl-6 pr-6 w-full">
+                        <div className="flex items-center justify-between pl-4 pr-6 w-full">
                             <div id="right" className="">
                                 <h3 className="font-light text-gray text-size-2">Email subject</h3>
                             </div>
-                            <div>
+                            {/* <div>
                                 <h2 className="font-normal text-gray text-size-3">Saved at 16:40,23 Dec, 2018</h2>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
-                    <div className="w-1/2 border-gray border-b mt-4 h-12 pl-6">
+                    <div id="emailSubject" className="w-full border-gray border-b mt-2 h-8 pl-4">
                         <h1>September Content offer</h1>
                     </div>
-                    <div className="mt-4 mb-4 ml-6">
+                    <div className="mt-4 mb-4 ml-4">
                         <h2 className="text-size-2 text-blue font-semibold cursor-pointer">
                             Add recepients
                         </h2>
@@ -47,7 +63,7 @@ export default function CreateEmail() {
                     <div id="separator" className="flex">
                         <span className="bg-gray h-px w-full opacity-50"></span>
                     </div>
-                    <div className="flex flex-col items-center justify-center w-auto h-96 bg-gray-bg m-6">
+                    <div className="flex flex-col items-center justify-center w-auto h-96 bg-gray-bg m-4">
                         <BsCardImage className="w-12 h-12 text-gray-table mb-4"></BsCardImage>
                         <h3 className="text-black text-size-3">Drop an image her</h3>
                         <h4 className="text-gray font-light">or</h4>
@@ -66,7 +82,7 @@ export default function CreateEmail() {
 
                     </div>
                 </div>
-                <div className="flex flex-col w-1/3 h-1/2 bg-white rounded-xl shadow-md ml-6">
+                <div id="emailComponents" className="hidden flex-col w-1/3 h-1/2 bg-white rounded-md shadow-md ml-4">
                     <div className="w-1/2 mt-4 h-12 pl-6">
                         <h1>Components</h1>
                     </div>
@@ -79,19 +95,19 @@ export default function CreateEmail() {
                     </div>
                     <div className="flex flex-col p-2">
                         <div className="flex">
-                            <div className="flex flex-col justify-center items-center w-1/3 h-1/3 p-2">
-                                <div className="flex w-24 h-24 items-center justify-center bg-gray-bg">
+                            <div className="flex flex-col justify-center items-center w-full h-4/5 p-2">
+                                <div className="flex w-full h-full items-center justify-center bg-gray-bg">
                                     <BsCardImage className="w-6 h-6 text-gray-table"></BsCardImage>
                                 </div>
                                 <h1 className="text-gray">Text</h1>
                             </div>
-                            <div className="flex flex-col justify-center items-center w-1/3 h-1/3 p-2">
+                            <div className="flex flex-col justify-center items-center w-full h-4/5 p-2">
                                 <div className="flex w-24 h-24 items-center justify-center bg-gray-bg">
                                     <BsCardImage className="w-6 h-6 text-gray-table"></BsCardImage>
                                 </div>
                                 <h1 className="text-gray">Image</h1>
                             </div>
-                            <div className="flex flex-col justify-center items-center w-1/3 h-1/3 p-2">
+                            <div className="flex flex-col justify-center items-center w-full h-4/5 p-2">
                                 <div className="flex w-24 h-24 items-center justify-center bg-gray-bg">
                                     <BsCardImage className="w-6 h-6 text-gray-table"></BsCardImage>
                                 </div>
@@ -99,19 +115,19 @@ export default function CreateEmail() {
                             </div>
                         </div>
                         <div className="flex">
-                            <div className="flex flex-col justify-center items-center w-1/3 h-1/3 p-2">
+                            <div className="flex flex-col justify-center items-center w-full h-4/5 p-2">
                                 <div className="flex w-24 h-24 items-center justify-center bg-gray-bg">
                                     <BsCardImage className="w-6 h-6 text-gray-table"></BsCardImage>
                                 </div>
                                 <h1 className="text-gray">Button</h1>
                             </div>
-                            <div className="flex flex-col justify-center items-center w-1/3 h-1/3 p-2">
+                            <div className="flex flex-col justify-center items-center w-full h-4/5 p-2">
                                 <div className="flex w-24 h-24 items-center justify-center bg-gray-bg">
                                     <BsCardImage className="w-6 h-6 text-gray-table"></BsCardImage>
                                 </div>
                                 <h1 className="text-gray">Divider</h1>
                             </div>
-                            <div className="flex flex-col justify-center items-center w-1/3 h-1/3 p-2">
+                            <div className="flex flex-col justify-center items-center w-full h-4/5 p-2">
                                 <div className="flex w-24 h-24 items-center justify-center bg-gray-bg">
                                     <BsCardImage className="w-6 h-6 text-gray-table"></BsCardImage>
                                 </div>
@@ -119,19 +135,24 @@ export default function CreateEmail() {
                             </div>
                         </div>
                         <div className="flex">
-                            <div className="flex flex-col justify-center items-center w-1/3 h-1/3 p-2">
+                            <div className="flex flex-col justify-center items-center w-full h-4/5 p-2">
                                 <div className="flex w-24 h-24 items-center justify-center bg-gray-bg">
                                     <BsCardImage className="w-6 h-6 text-gray-table"></BsCardImage>
                                 </div>
                                 <h1 className="text-gray">Footer</h1>
                             </div>
-                            <div className="flex flex-col justify-center items-center w-1/3 h-1/3 p-2">
+                            <div className="flex flex-col justify-center items-center w-full h-4/5 p-2">
                                 <div className="flex w-24 h-24 items-center justify-center bg-gray-bg">
                                     <BsCardImage className="w-6 h-6 text-gray-table"></BsCardImage>
                                 </div>
                                 <h1 className="text-gray">Header</h1>
                             </div>
-
+                            <div className="flex flex-col justify-center items-center w-full h-4/5 p-2">
+                                <div className="flex w-24 h-24 items-center justify-center bg-gray-bg">
+                                    <BsCardImage className="w-6 h-6 text-gray-table"></BsCardImage>
+                                </div>
+                                <h1 className="text-gray">Header</h1>
+                            </div>
                         </div>
 
                     </div>

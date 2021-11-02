@@ -1,0 +1,64 @@
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+    #contactsTable {
+        @apply h-full;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+    #contactsTable {
+        @apply h-full;
+    }
+}
+
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+    #addContactContainer {
+        @apply flex-row pl-8 pr-8 pt-8 pb-0;
+    }
+    #contactsTable {
+        @apply pl-8 pr-8 pb-8;
+    }
+    #emailContacts {
+        @apply table-cell;
+    }
+    #companyName {
+        @apply table-cell;
+    }
+    #role {
+        @apply table-cell;
+    }
+    #forecast {
+        @apply table-cell;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+    #addContactContainer {
+        @apply flex-row pl-8 pr-8 pt-8 pb-0;
+    }
+    #contactsTable {
+        @apply pl-8 pr-8 pb-8;
+    }
+
+    #emailContacts {
+        @apply table-cell;
+    }
+    #companyName {
+        @apply table-cell;
+    }
+    #role {
+        @apply table-cell;
+    }
+    #forecast {
+        @apply table-cell;
+    }
+}

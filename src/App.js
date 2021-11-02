@@ -1,5 +1,4 @@
 import Topbar from './components/topbar/'
-import Sidebar from './components/sidebar'
 import Dashboard from './components/dashboard'
 import Tasks from './components/tasks'
 import Email from './components/email'
@@ -10,11 +9,12 @@ import NewContact from './components/newContact'
 import UserSettings from './components/userSettings'
 import Settings from './components/settings'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Navbar from './components/navbar'
 function App() {
   return (
     <Router>
       <div className="flex w-full bg-gray-bg">
-        <Sidebar />
+        <Navbar />
         <div id="mainContent" className="flex flex-col w-full h-full">
           {/* <Topbar /> */}
           <div className="flex overflow-auto h-full">
@@ -25,22 +25,25 @@ function App() {
               <Route exact path="/tasks">
                 <Tasks />
               </Route>
-              <Route exact path="/emails">
+              <Route exact path="/email">
                 <Email />
               </Route>
               <Route exact path="/createEmail">
                 <CreateEmail />
               </Route>
+              <Route exact path="/contacts">
+                <Contacts />
+              </Route>
+              <Route exact path="/newContact">
+                <NewContact />
+              </Route>
+              <Route exact path="/userSettings">
+                <UserSettings />
+              </Route>
+              <Route exact path="/settings">
+                <Settings />
+              </Route>
             </Switch>
-
-            {/* <Tasks /> */}
-            {/* <Email /> */}
-            {/* <EmailRecepients /> */}
-            {/* <CreateEmail /> */}
-            {/* <Contacts /> */}
-            {/* <NewContact /> */}
-            {/* <UserSettings /> */}
-            {/* <Settings /> */}
           </div>
         </div>
       </div >

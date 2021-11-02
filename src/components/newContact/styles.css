@@ -12,9 +12,76 @@
   @apply text-blue;
 }
 
-.active > svg{
-    @apply text-black
+.activeNewContact > svg{
+  @apply border-r-2 text-blue border-blue;
 }
-.active > h2{
-    @apply text-black
+.activeNewContact > h2{
+  @apply text-black;
+}
+
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 375px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+  #contactsTop {
+    @apply block;
+  }
+  #newContact {
+    @apply w-2/3 pr-8;
+  }
+  #backToContacts {
+    @apply w-1/3 pt-8 pl-8 pr-8 pb-8 mt-0;
+  }
+  #backToContacts >div:first-child {
+    @apply w-48;
+  }
+  #newContactContainer {
+    @apply flex-row;
+  }
+  #newContactHistory {
+    @apply mb-0;
+  }
+  #mobileNewContacts {
+    @apply flex;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+  #contactsTop {
+    @apply block;
+  }
+  #newContact {
+    @apply w-2/3 pr-8;
+  }
+  #backToContacts {
+    @apply w-1/3 pt-8 pl-8 pr-8 pb-8 mt-0;
+  }
+  #backToContacts >div:first-child {
+    @apply w-48;
+  }
+  #newContactContainer {
+    @apply flex-row;
+  }
+  #newContactHistory {
+    @apply mb-0;
+  }
+  #mobileNewContacts {
+    @apply flex;
+  }
 }
