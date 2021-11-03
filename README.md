@@ -2,7 +2,7 @@
 <div align="center">
   <br />
   <p>
-    <img src="https://gyazo.com/8ae818adfd067bdcadede3aa403413ec" width="546" alt=admin-dashboard" border="0">
+  <img src="https://gyazo.com/8ae818adfd067bdcadede3aa403413ec" alt="home" border="0">
   </p>
   <br />
   <p>
